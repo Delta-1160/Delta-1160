@@ -1,0 +1,64 @@
+#include <iostream>
+#include <vector>
+
+using namespace std;
+bool possiblesolution(vector<int> &stalls  , int n ,int m, int mid )
+{
+ int lastpos = stalls [0];           	
+ int  cowcount = 1;
+   for (int i = 0 ; i<n; i++){
+      if (stalls [i] - lastpos >= mid)  	
+   	   {
+   	  cowcount ++ ;
+   	   	
+   	  if (cowcount == m)
+   	  { 	      	
+       	
+  return true ;
+  }         	
+lastpos = stalls[i];
+ 	
+}
+}
+return false;
+}
+int aggresivecow(vector <int> &stalls, int m)
+{
+	sort (stalls.begin(), stalls .end());
+	 int s = 0;
+	int ans = -1;
+    int n = stalls.size();  
+    int  e = stalls [n -1];
+                       
+int  mid = s + (e- s)/2;
+
+while (s <= e)
+{
+	if (possiblesolution(stalls , n, m,mid))
+{
+		ans = mid ;
+	s = mid +1;
+}
+
+else 
+{
+	e = mid -1;
+}
+
+mid = s + (e- s)/2;
+
+}
+return ans ;
+}
+
+
+int main () {
+	
+	vector <int>stalls = {1,2,3,4,5,6};
+	
+	int a = aggresivecow(stalls, 2);
+	
+	cout << a << endl ;
+	
+	
+}

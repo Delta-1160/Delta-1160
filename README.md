@@ -1,6 +1,6 @@
 - 👋 Hi, I’m @Delta-1160
 - 👀 I’m interested in Exploring new things
-- 🌱 I’m currently learning BCCA
+- 🌱 I’m currently learning Data Analytics
 - 💞️ I’m looking to collaborate on ...
 - 📫 How to reach me ...
 
